@@ -73,7 +73,24 @@ table tr:nth-child(even) td{background:#F9FAFB}
 details summary{font-weight:600;color:#14532D;list-style:none}
 a{color:inherit;text-decoration:none}
 .dd a:hover{background:#F5F5F5}
-.nav-item.has-dd:hover .dd{display:block}</style><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#581C87"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></head><body>
+.nav-item.has-dd:hover .dd{display:block}</style><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#581C87"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><style id="minimal-fix-v5">
+/* Sticky para navbar específicos (NO header.hero) */
+.topbar, .navbar, .header-top, .main-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1010 !important;
+}
+header.hero, .hero { position: relative !important; }
+/* Dropdowns por encima del hero */
+.dd, .has-dd .dd, .nav-item .dd {
+  z-index: 1100 !important;
+}
+/* Leaflet contained */
+.leaflet-pane { z-index: 400 !important; }
+.leaflet-control { z-index: 800 !important; }
+.leaflet-container { z-index: 1 !important; }
+</style>
+</head><body>
 
 <nav class="navbar">
     <div class="logo-area">
@@ -81,12 +98,12 @@ a{color:inherit;text-decoration:none}
         <div class="logo-text">Geotecnia 1</div>
     </div>
     <div class="nav">
-        <div class="nav-item has-dd"><a href="/exploracion/" class="nav-cat-link" style="color:inherit;text-decoration:none">Exploración</a> <span>▾</span><div class="dd"><a href="/ensayo-cpt/">Ensayo CPT (Cone Penetration Test)</a></div></div><div class="nav-item has-dd"><a href="/laboratorio-in-situ/" class="nav-cat-link" style="color:inherit;text-decoration:none">Ensayos in situ</a> <span>▾</span><div class="dd"><a href="/densidad-cono-arena/">Densidad de campo (cono de arena)</a></div></div><div class="nav-item has-dd"><a href="/laboratorio-lab/" class="nav-cat-link" style="color:inherit;text-decoration:none">Laboratorio</a> <span>▾</span><div class="dd"><a href="/granulometria/">Análisis granulométrico (tamices + hidrómetro)</a><a href="/limites-atterberg/">Límites de Atterberg</a></div></div><div class="nav-item has-dd"><a href="/cimentaciones/" class="nav-cat-link" style="color:inherit;text-decoration:none">Cimentaciones</a> <span>▾</span><div class="dd"><a href="/pilotes/">Diseño de fundaciones en pilotes</a></div></div><div class="nav-item has-dd"><a href="/taludes/" class="nav-cat-link" style="color:inherit;text-decoration:none">Taludes y muros</a> <span>▾</span><div class="dd"><a href="/estabilidad-taludes/">Análisis de estabilidad de taludes</a><a href="/anclajes/">Diseño de anclajes activos/pasivos</a><a href="/muros-contencion/">Diseño de muros de contención</a></div></div><div class="nav-item has-dd"><a href="/mejoramiento/" class="nav-cat-link" style="color:inherit;text-decoration:none">Mejoramiento</a> <span>▾</span><div class="dd"><a href="/columnas-grava/">Diseño de columnas de grava (stone columns)</a><a href="/vibrocompactacion/">Diseño de vibrocompactación</a></div></div><div class="nav-item has-dd"><a href="/excavaciones-subterraneo/" class="nav-cat-link" style="color:inherit;text-decoration:none">Excavaciones subterráneas</a> <span>▾</span><div class="dd"><a href="/tuneles-suelo-blando/">Análisis geotécnico para túneles en suelo blando</a><a href="/excavaciones-profundas/">Diseño geotécnico de excavaciones profundas</a><a href="/monitoreo-excavaciones/">Monitoreo geotécnico de excavaciones</a></div></div><div class="nav-item has-dd"><a href="/geotecnia-vial/" class="nav-cat-link" style="color:inherit;text-decoration:none">Geotecnia vial</a> <span>▾</span><div class="dd"><a href="/pavimento-flexible/">Diseño de pavimento flexible</a><a href="/pavimento-rigido/">Diseño de pavimento rígido</a><a href="/cbr-vial/">Estudio CBR para diseño vial</a><a href="/geotecnia-vial/">Geotecnia vial (diseño pavimentos/subrasante)</a></div></div><div class="nav-item has-dd"><a href="/sismica/" class="nav-cat-link" style="color:inherit;text-decoration:none">Sísmica</a> <span>▾</span><div class="dd"><a href="/licuefaccion/">Análisis de licuefacción de suelos</a><a href="/aislacion-sismica/">Diseño de aislación sísmica de base</a><a href="/microzonificacion-sismica/">Microzonificación sísmica</a></div></div>
+        <div class="nav-item has-dd"><a href="/exploracion/" class="nav-cat-link" style="color:inherit;text-decoration:none">Exploración</a> <span>▾</span><div class="dd"><a href="/ensayo-cpt/">Ensayo CPT (Cone Penetration Test)</a></div></div><div class="nav-item has-dd"><a href="/laboratorio-in-situ/" class="nav-cat-link" style="color:inherit;text-decoration:none">Ensayos in situ</a> <span>▾</span><div class="dd"><a href="/densidad-cono-arena/">Densidad de campo (cono de arena)</a></div></div><div class="nav-item has-dd"><a href="/laboratorio-lab/" class="nav-cat-link" style="color:inherit;text-decoration:none">Laboratorio</a> <span>▾</span><div class="dd"><a href="/granulometria/">Análisis granulométrico (tamices + hidrómetro)</a><a href="/limites-atterberg/">Límites de Atterberg</a></div></div><div class="nav-item has-dd"><a href="/cimentaciones/" class="nav-cat-link" style="color:inherit;text-decoration:none">Cimentaciones</a> <span>▾</span><div class="dd"><a href="/pilotes/">Diseño de fundaciones en pilotes</a></div></div><div class="nav-item has-dd"><a href="/taludes/" class="nav-cat-link" style="color:inherit;text-decoration:none">Taludes y muros</a> <span>▾</span><div class="dd"><a href="/estabilidad-taludes/">Análisis de estabilidad de taludes</a><a href="/anclajes/">Diseño de anclajes activos/pasivos</a><a href="/muros-contencion/">Diseño de muros de contención</a></div></div><div class="nav-item has-dd"><a href="/mejoramiento/" class="nav-cat-link" style="color:inherit;text-decoration:none">Mejoramiento</a> <span>▾</span><div class="dd"><a href="/columnas-grava/">Diseño de columnas de grava (stone columns)</a><a href="/vibrocompactacion/">Diseño de vibrocompactación</a></div></div><div class="nav-item has-dd"><a href="/excavaciones-subterraneo/" class="nav-cat-link" style="color:inherit;text-decoration:none">Excavaciones</a> <span>▾</span><div class="dd"><a href="/tuneles-suelo-blando/">Análisis geotécnico para túneles en suelo blando</a><a href="/excavaciones-profundas/">Diseño geotécnico de excavaciones profundas</a><a href="/monitoreo-excavaciones/">Monitoreo geotécnico de excavaciones</a></div></div><div class="nav-item has-dd"><a href="/geotecnia-vial/" class="nav-cat-link" style="color:inherit;text-decoration:none">Vial</a> <span>▾</span><div class="dd"><a href="/pavimento-flexible/">Diseño de pavimento flexible</a><a href="/pavimento-rigido/">Diseño de pavimento rígido</a><a href="/cbr-vial/">Estudio CBR para diseño vial</a><a href="/geotecnia-vial/">Vial (diseño pavimentos/subrasante)</a></div></div><div class="nav-item has-dd"><a href="/sismica/" class="nav-cat-link" style="color:inherit;text-decoration:none">Sísmica</a> <span>▾</span><div class="dd"><a href="/licuefaccion/">Análisis de licuefacción de suelos</a><a href="/aislacion-sismica/">Diseño de aislación sísmica de base</a><a href="/microzonificacion-sismica/">Microzonificación sísmica</a></div></div>
     </div>
 </nav>
 
 <header class="hero"><div class="hero-inner">
-    <div class="crumb-f54c-f54c"><a href="/">← Home</a> · Excavaciones subterráneas</div>
+    <div class="crumb-f54c-f54c"><a href="/">← Home</a> · Excavaciones</div>
     <h1>Análisis Geotécnico para Túneles en Suelo Blando en Alto Hospicio</h1>
     <p class="together">Juntos resolvemos los desafíos del mañana.</p>
     <a class="hero-cta" href="#main-content">CONOCER MÁS →</a>
@@ -141,7 +158,7 @@ a{color:inherit;text-decoration:none}
 
 <section class="section"><h2>Normas aplicables</h2>
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
-<p>NCh 3171: Diseño estructural - Excavaciones subterráneas, NCh 2369: Diseño sísmico de estructuras industriales (aplicable a revestimientos), NCh 1508: Geotecnia - Estudio de mecánica de suelos, NCh 3253: Ensayo triaxial consolidado no drenado (CU), FHWA-NHI-05: Manual de túneles en suelo</p></section>
+<p>NCh 3171: Diseño estructural - Excavaciones, NCh 2369: Diseño sísmico de estructuras industriales (aplicable a revestimientos), NCh 1508: Geotecnia - Estudio de mecánica de suelos, NCh 3253: Ensayo triaxial consolidado no drenado (CU), FHWA-NHI-05: Manual de túneles en suelo</p></section>
 
 <section class="section"><h2>Preguntas comunes</h2><details><summary>¿Cuánto cuesta un análisis geotécnico para un túnel en Alto Hospicio?</summary><p>El rango de inversión para una campaña de análisis geotécnico para túneles en suelo blando en Alto Hospicio fluctúa entre $2.067.000 y $8.361.000. Esta variación depende de la longitud del trazado, el número de sondajes profundos requeridos y la cantidad de ensayos triaxiales y de colapso necesarios para caracterizar los horizontes salinos de la Formación Alto Hospicio.</p></details><details><summary>¿Qué distingue un túnel en suelo blando de uno en roca dura en esta zona?</summary><p>En Alto Hospicio, la diferencia crítica es la cementación salina. La 'roca' de la Formación Alto Hospicio es en realidad un suelo estructurado que pierde resistencia al humedecerse. Mientras un túnel en roca dura se diseña por cuñas estructurales, aquí el diseño se enfoca en controlar las deformaciones por fluencia y prevenir el colapso por disolución del cemento evaporítico.</p></details><details><summary>¿Cómo afecta la actividad sísmica al diseño de un túnel en Alto Hospicio?</summary><p>La zona sísmica 3 según NCh 433 impone demandas de deformación lateral significativas. Durante un sismo, el revestimiento del túnel debe absorber la ovalización inducida por la distorsión angular del terreno. Nuestro análisis incorpora métodos de interacción suelo-estructura para verificar que el revestimiento proyectado mantenga la serviciabilidad post-sismo sin colapsar.</p></details></section>
 
@@ -156,7 +173,7 @@ a{color:inherit;text-decoration:none}
         <link rel="stylesheet" href="/css/leaflet.css">
         <script src="/js/leaflet.js"></script>
         <script>
-        (function(){
+(function(){
           var m=L.map("map_27f153",{zoomControl:true,attributionControl:true}).setView([-20.27,-70.1009],11);
           L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",{
             attribution:"&copy; OpenStreetMap colaboradores &copy; CARTO",maxZoom:19,subdomains:"abcd"
